@@ -1,41 +1,42 @@
 # **Takım İsmi**
 
-Takım X
+Millenium Game
 
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
 
-- John Doe: Product Owner
-- Jane Doe: Scrum Master
-- Atıl Samancıoğlu: Team Member/Developer
+- Gufran Yeşilyurt: Product Owner
+- Büşra Tatar: Scrum Master
+- Yunus Emre Baysal, Esma Yurttaş: Team Member/Developer
 
 ## Ürün İsmi
 
---Movie App--
+--Oathbreaker: Fallen Knight--
 
 ## Ürün Açıklaması
 
-- Movie App uygulamamız ile insanların izlemek istediği filmlere ve dizilere daha kolay karar vermesini sağlayacağız. İçerisinde binlerce filmi barındıran uygulamamız aynı zamanda Netflix, Prime vb. platformlarda yayınlanıp yayınlanmadığını ve IMDB puanlarını da gösterecek.
+- Oathbreaker 2D bir pixel art platfomer oyunudur. Ama oyunumuzda benzer genrelerde pek rastlanmayan bir mekanik olarak, oyuncuya aktif ve pasif kararlarla oyunun geleceğini seçebilme imkanı verilir.
 
 ## Ürün Özellikleri
 
-- Filmleri türüne göre ayırma
-- Filmlerin yönetmen, aktör, aktris vb. bilgilerini posteriyle birlikte gösterme
-- IMDB ve Rotten Tomatoes puanlarını gösterme
-- Netflix'te ve Prime'da bulunurluğunu gösterme
+- Karakterin hareket seçeneği çoktur. (Klasik hareketlere ek saldırı ve savunma)
+- Oyuncunun yaptığı seçimler ile oyun ile bağlantı kurulabilir.
+- Farklı konsepler oyuncuda merak duygusu uyandırır.
+- Farklı level mekanikleri ve enemy/boss lar sayesinde ideal zorluk seviyesi sağlanmıştır.
 
 ## Hedef Kitle
 
-- Netflix kullanıcıları
-- Prime kullanıcıları
-- Sinema severler
-- Dizi severler
-- 15 - 65 yaş arası kullanıcılar
+- Video oyun severler
+- Steam ve Nintendo Switch kullanıcıları
+- Pixel art severler
+- Oyunda merak duygusu sevenler
+- 15 - 55 yaş arası kullanıcılar
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVOSSCpsI=/)
+[Trello Backlog Board](https://trello.com/invite/b/k3H1dCDV/5b89bfeb1e7ee4306b44a104d23273e4/oyunumuz)
+[Notion Education and Meeting's Calender Board](https://www.notion.so/evik-Proje-Y-netimi-zet-Anlat-m-9016c5ffbea944e4af8805321932f2f3)
 
 ---
 
