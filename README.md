@@ -1,6 +1,6 @@
 # **Takım İsmi**
 
-Millenium Game
+Millennium Game
 
 # Ürün İle İlgili Bilgiler
 
