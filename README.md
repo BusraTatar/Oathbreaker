@@ -1,6 +1,6 @@
-# **Takım İsmi**
+# **Millennium Game**
 
-Millennium Game
+- Bu repository Oyun ve Uygulama Akademisi Mezuniyet Bootcamp Projesi için üretilmiştir.
 
 # Ürün İle İlgili Bilgiler
 
