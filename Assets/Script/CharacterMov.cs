@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMov : MonoBehaviour
 {
     [SerializeField]
-    float speed = 4;
+    float speed = 0.0f;
     bool isGrounded;
     bool isStairs;
     int jumpers;
@@ -66,14 +66,24 @@ public class CharacterMov : MonoBehaviour
         // Movement
         if (Input.GetKey(KeyCode.D))
         {
+            speed = 4.0f;
             transform.Translate(speed * Time.deltaTime, 0, 0);
-            Anim.SetTrigger("ForRun");
+            Anim.SetFloat("speed", speed);
+            //Anim.SetTrigger("ForRun");
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
+            speed = 4.0f;
             transform.Translate(-speed * Time.deltaTime, 0, 0);
-            Anim.SetTrigger("ForRun");
+            Anim.SetFloat("speed", speed);
+            //Anim.SetTrigger("ForRun");
         }
+        else
+        {
+            speed = 0;
+            Anim.SetFloat("speed", speed);
+        }
+
 
 
         //Climb
@@ -130,7 +140,7 @@ public class CharacterMov : MonoBehaviour
 
 
         // Attacks1
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             Anim.SetTrigger("ForAttacks");
         }
