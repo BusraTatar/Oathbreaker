@@ -5,27 +5,32 @@ using UnityEngine;
 public class CharacterMov : MonoBehaviour
 {
     [SerializeField]
-    float speed = 0.0f;
-    bool isGrounded;
-    bool isStairs;
-    int jumpers;
-    int slide;
+    private float speed = 0.0f;
 
-    Rigidbody2D rigi;
+    private bool isGrounded;
 
-    public Animator Anim; 
+    private bool isStairs;
 
+    private int jumpers;
+
+    private int slide;
+
+    private Animator _animator;
+
+    private Rigidbody2D r2d;
+
+    private SpriteRenderer _spriteRenderer;
 
     void Start()
     {
-        rigi = GetComponent<Rigidbody2D>();
-        isGrounded = false;
-        jumpers = 0;
+        r2d = GetComponent<Rigidbody2D>(); //caching Rigidbody2D
+        _spriteRenderer = GetComponent<SpriteRenderer>(); //caching SpriteRenderer
+        _animator = GetComponent<Animator>(); //caching Animator
+        isGrounded = true;
         isStairs = false;
         slide = 0;
     }
 
-  
     void Update()
     {
         Movement();
@@ -33,18 +38,21 @@ public class CharacterMov : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag== "Platform")
+        if (collision.gameObject.tag == "Platform")
         {
+            _animator.SetBool("grounded", true);
             isGrounded = true;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D Stairs)
     {
-        if(Stairs.gameObject.tag== "Stairs")
+        if (Stairs.gameObject.tag == "Stairs")
         {
             isStairs = true;
         }
     }
+
     private void OnTriggerStay2D(Collider2D Stairs)
     {
         if (Stairs.gameObject.tag == "Stairs")
@@ -52,6 +60,7 @@ public class CharacterMov : MonoBehaviour
             isStairs = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D Stairs)
     {
         if (Stairs.gameObject.tag == "Stairs")
@@ -62,101 +71,81 @@ public class CharacterMov : MonoBehaviour
 
     void Movement()
     {
-
         // Movement
         if (Input.GetKey(KeyCode.D))
         {
+            _spriteRenderer.flipX = false;
             speed = 4.0f;
             transform.Translate(speed * Time.deltaTime, 0, 0);
-            Anim.SetFloat("speed", speed);
-            //Anim.SetTrigger("ForRun");
+            _animator.SetFloat("speed", speed);
+            _animator.SetBool("moving", true);
         }
         else if (Input.GetKey(KeyCode.A))
         {
+            _spriteRenderer.flipX = true;
             speed = 4.0f;
             transform.Translate(-speed * Time.deltaTime, 0, 0);
-            Anim.SetFloat("speed", speed);
-            //Anim.SetTrigger("ForRun");
+            _animator.SetFloat("speed", speed);
+            _animator.SetBool("moving", true);
         }
         else
         {
             speed = 0;
-            Anim.SetFloat("speed", speed);
+            _animator.SetFloat("speed", speed);
+            _animator.SetBool("moving", false);
         }
-
-
 
         //Climb
         if (isStairs)
         {
-          if (Input.GetKey(KeyCode.W))
-          {
-            rigi.velocity = new Vector2(0, speed);
-            Anim.SetTrigger("ForClimb");
-          } 
-          if (Input.GetKey(KeyCode.S))
-          {
-            rigi.velocity = new Vector2(0, -speed);
-            Anim.SetTrigger("ForClimb");
-          }
+            if (Input.GetKey(KeyCode.W))
+            {
+                r2d.velocity = new Vector2(0, speed);
+                _animator.SetTrigger("ForClimb");
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                r2d.velocity = new Vector2(0, -speed);
+                _animator.SetTrigger("ForClimb");
+            }
         }
-        
-
-
 
         // Ground Control
         if (Input.GetKey(KeyCode.Space))
         {
-            if (isGrounded == true || jumpers < 2)
+            if (isGrounded == true)
             {
                 Jump();
                 isGrounded = false;
-                jumpers++;
+                _animator.SetTrigger("jump");
+                _animator.SetBool("grounded", false);
             }
-
-           
-        }
-       
-        if (isGrounded == true)
-        {
-            jumpers = 0;
         }
 
         //Defense
-
         if (Input.GetKey(KeyCode.E))
         {
             if (slide == 0)
             {
                 slide = 1;
                 transform.Translate(2 * Time.deltaTime, 0, 0);
-                Anim.SetTrigger("ForSlide");
+                _animator.SetTrigger("ForSlide");
             }
             slide = 0;
-            
         }
-
-
-
 
         // Attacks1
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0))
         {
-            Anim.SetTrigger("ForAttacks");
+            _animator.SetTrigger("ForAttacks");
         }
     }
-
 
     // Jump
     void Jump()
     {
-        rigi.velocity = new Vector2(0, 2);
+        r2d.velocity = new Vector2(r2d.velocity.x, 2);
 
-        rigi.velocity += new Vector2(0, 2);
+        r2d.velocity += new Vector2(0, 2);
     }
-
 }
-
-
-
-
