@@ -7,9 +7,13 @@ public class CharacterMov : MonoBehaviour
     [SerializeField]
     private float speed = 0.0f;
 
+    private float slideSpeed = 2.0f;
+
     private bool isGrounded;
 
     private bool isStairs;
+
+    private bool isSlide = false;
 
     private int jumpers;
 
@@ -21,6 +25,10 @@ public class CharacterMov : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
+    public BoxCollider2D regularColl;
+
+    public BoxCollider2D slideColl;
+
     void Start()
     {
         r2d = GetComponent<Rigidbody2D>(); //caching Rigidbody2D
@@ -28,7 +36,6 @@ public class CharacterMov : MonoBehaviour
         _animator = GetComponent<Animator>(); //caching Animator
         isGrounded = true;
         isStairs = false;
-        slide = 0;
     }
 
     void Update()
@@ -123,15 +130,39 @@ public class CharacterMov : MonoBehaviour
         }
 
         //Defense
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (slide == 0)
+            isSlide = true;
+            _animator.SetBool("isSlide", true);
+            regularColl.enabled = false;
+            slideColl.enabled = true;
+
+            if (!_spriteRenderer.flipX)
             {
-                slide = 1;
-                transform.Translate(2 * Time.deltaTime, 0, 0);
-                _animator.SetTrigger("ForSlide");
+                r2d.AddForce(Vector2.right * slideSpeed);
+            } else
+            {
+                r2d.AddForce(Vector2.left * slideSpeed);
             }
-            slide = 0;
+            StartCoroutine(stopSlide());
+        }
+
+        IEnumerator stopSlide(){
+            yield return new WaitForSeconds(0.8f);
+            if(speed > 0){
+                _animator.Play("Run");
+                _animator.SetBool("isSlide", false);
+                regularColl.enabled = true;
+                slideColl.enabled = false;
+                isSlide = false;
+            }else
+            {
+                _animator.Play("Idle");
+                _animator.SetBool("isSlide", false);
+                regularColl.enabled = true;
+                slideColl.enabled = false;
+                isSlide = false;
+            }
         }
 
         // Attacks1
