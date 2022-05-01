@@ -12,11 +12,13 @@ public class CharacterMov : MonoBehaviour
 
     private float vertical;
 
+    private float horizontal;
+
     private bool isGrounded;
 
-    private bool isLadder;
+    private bool isSlide;
 
-    private bool isSlide = false;
+    private bool isLadder;
 
     private int jumpers;
 
@@ -38,19 +40,19 @@ public class CharacterMov : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>(); //caching SpriteRenderer
         _animator = GetComponent<Animator>(); //caching Animator
         isGrounded = true;
+        isSlide = false;
         isLadder = false;
     }
 
     void Update()
     {
         Movement();
-        vertical = Input.GetAxis("Vertical");
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (other.gameObject.CompareTag("Platform"))
         {
             _animator.SetBool("grounded", true);
             isGrounded = true;
@@ -59,7 +61,7 @@ public class CharacterMov : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Ladder")
+        if (other.gameObject.CompareTag("Ladder"))
         {
             isLadder = true;
         }
@@ -67,32 +69,27 @@ public class CharacterMov : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Ladder")
+        if (other.gameObject.CompareTag("Ladder"))
         {
             isLadder = true;
         }
     }
 
+
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Ladder")
+        if (other.gameObject.CompareTag("Ladder"))
         {
             isLadder = false;
-            
         }
     }
+    
 
     private void FixedUpdate()
     {
-        if (isLadder && Math.Abs(vertical) > 0)
-        {
-            r2d.gravityScale = 0;
-            r2d.velocity = new Vector2(r2d.velocity.x, vertical * speed);
-        }
-        else
-        {
-            r2d.gravityScale = 1.0f;
-        }
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+        r2d.velocity = new Vector2(horizontal * speed, r2d.velocity.y);
     }
 
     void Movement()
@@ -101,16 +98,14 @@ public class CharacterMov : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _spriteRenderer.flipX = false;
-            speed = 4.0f;
-            transform.Translate(speed * Time.deltaTime, 0, 0);
+            speed = 8.0f;
             _animator.SetFloat("speed", speed);
             _animator.SetBool("moving", true);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             _spriteRenderer.flipX = true;
-            speed = 4.0f;
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
+            speed = 8.0f;
             _animator.SetFloat("speed", speed);
             _animator.SetBool("moving", true);
         }
@@ -122,21 +117,30 @@ public class CharacterMov : MonoBehaviour
         }
 
         //Climb
-        //if (isLadder)
-        //{
-        //    if (Input.GetKey(KeyCode.W))
-        //    {
-        //        r2d.gravityScale = 0;
-        //        r2d.velocity = new Vector2(r2d.velocity.x, vertical * speed);
-        //        _animator.SetTrigger("ForClimb");
-        //    }
-        //    if (Input.GetKey(KeyCode.S))
-        //    {
-        //        r2d.gravityScale = 1.0f;
-        //        r2d.velocity = new Vector2(0, -speed);
-        //        _animator.SetTrigger("ForClimb");
-        //    }
-        //}
+        if (isLadder)
+        {
+            r2d.gravityScale = 0;
+            if (Input.GetKey(KeyCode.W))
+            {
+                r2d.velocity = new Vector2(r2d.velocity.x, vertical * 4);
+                _animator.SetBool("isClimbing", true);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                r2d.gravityScale = 0f;
+                r2d.velocity = new Vector2(0, vertical * 4);
+                _animator.SetBool("isClimbing", true);
+            }
+            else
+            {
+                _animator.SetBool("isClimbing", false);
+            }
+        }
+        else
+        {
+            _animator.SetBool("isClimbing", false);
+            r2d.gravityScale = 10.0f;
+        }
 
         // Ground Control
         if (Input.GetKey(KeyCode.Space))
@@ -196,8 +200,8 @@ public class CharacterMov : MonoBehaviour
     // Jump
     void Jump()
     {
-        r2d.velocity = new Vector2(r2d.velocity.x, 2);
+        r2d.velocity = new Vector2(r2d.velocity.x, 50);
 
-        r2d.velocity += new Vector2(0, 2);
+        //r2d.velocity += new Vector2(0, 8);
     }
 }
