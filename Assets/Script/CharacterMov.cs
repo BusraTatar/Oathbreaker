@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,11 @@ public class CharacterMov : MonoBehaviour
 
     private float slideSpeed = 2.0f;
 
+    private float vertical;
+
     private bool isGrounded;
 
-    private bool isStairs;
+    private bool isLadder;
 
     private bool isSlide = false;
 
@@ -35,12 +38,14 @@ public class CharacterMov : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>(); //caching SpriteRenderer
         _animator = GetComponent<Animator>(); //caching Animator
         isGrounded = true;
-        isStairs = false;
+        isLadder = false;
     }
 
     void Update()
     {
         Movement();
+        vertical = Input.GetAxis("Vertical");
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,27 +57,41 @@ public class CharacterMov : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D Stairs)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Stairs.gameObject.tag == "Stairs")
+        if (other.gameObject.tag == "Ladder")
         {
-            isStairs = true;
+            isLadder = true;
         }
     }
 
-    private void OnTriggerStay2D(Collider2D Stairs)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (Stairs.gameObject.tag == "Stairs")
+        if (other.gameObject.tag == "Ladder")
         {
-            isStairs = true;
+            isLadder = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D Stairs)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (Stairs.gameObject.tag == "Stairs")
+        if (other.gameObject.tag == "Ladder")
         {
-            isStairs = false;
+            isLadder = false;
+            
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isLadder && Math.Abs(vertical) > 0)
+        {
+            r2d.gravityScale = 0;
+            r2d.velocity = new Vector2(r2d.velocity.x, vertical * speed);
+        }
+        else
+        {
+            r2d.gravityScale = 1.0f;
         }
     }
 
@@ -103,19 +122,21 @@ public class CharacterMov : MonoBehaviour
         }
 
         //Climb
-        if (isStairs)
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                r2d.velocity = new Vector2(0, speed);
-                _animator.SetTrigger("ForClimb");
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                r2d.velocity = new Vector2(0, -speed);
-                _animator.SetTrigger("ForClimb");
-            }
-        }
+        //if (isLadder)
+        //{
+        //    if (Input.GetKey(KeyCode.W))
+        //    {
+        //        r2d.gravityScale = 0;
+        //        r2d.velocity = new Vector2(r2d.velocity.x, vertical * speed);
+        //        _animator.SetTrigger("ForClimb");
+        //    }
+        //    if (Input.GetKey(KeyCode.S))
+        //    {
+        //        r2d.gravityScale = 1.0f;
+        //        r2d.velocity = new Vector2(0, -speed);
+        //        _animator.SetTrigger("ForClimb");
+        //    }
+        //}
 
         // Ground Control
         if (Input.GetKey(KeyCode.Space))
