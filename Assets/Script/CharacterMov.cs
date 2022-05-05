@@ -7,16 +7,31 @@ public class CharacterMov : MonoBehaviour
 {
     public static CharacterMov instance;
 
-    [SerializeField]
-    private float speed = 0.0f;
+    private bool facingRight;
+
+    private float speed = 4.0f;
+
+    private float jumpSpeed = 7.5f;
+
+    private float jumpDelay = 0.5f;
+
+    private float jumpTimer;
+
+    private float fallMultiplier = 5f;
 
     private float slideSpeed = 2.0f;
+
+    private float gravity = 1f;
+
+    private float linearDrag = 4.0f;
 
     private float vertical;
 
     private float horizontal;
 
     private bool isGrounded;
+
+    private float groundLength = 1.25f;
 
     private bool isJump;
 
@@ -27,6 +42,10 @@ public class CharacterMov : MonoBehaviour
     private int jumpers;
 
     private int slide;
+
+    public Vector3 colliderOffset;
+
+    public ParticleSystem dust;
 
     public Animator _animator;
 
@@ -40,6 +59,8 @@ public class CharacterMov : MonoBehaviour
 
     public BoxCollider2D slideColl;
 
+    public LayerMask groundLayer;
+
     private void Awake()
     {
         instance = this;
@@ -49,7 +70,8 @@ public class CharacterMov : MonoBehaviour
         r2d = GetComponent<Rigidbody2D>(); //caching Rigidbody2D
         _spriteRenderer = GetComponent<SpriteRenderer>(); //caching SpriteRenderer
         _animator = GetComponent<Animator>(); //caching Animator
-        isGrounded = true;
+        facingRight = true;
+        isGrounded = false;
         isSlide = false;
         isLadder = false;
         isJump = false;
@@ -57,19 +79,36 @@ public class CharacterMov : MonoBehaviour
 
     void Update()
     {
+        isGrounded = Physics2D.Raycast(transform.position + colliderOffset, Vector2.down, groundLength, groundLayer) || Physics2D.Raycast(transform.position - colliderOffset, Vector2.down, groundLength, groundLayer);
+        
         Movement();
         Attack();
-    }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Platform"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            _animator.SetBool("grounded", true);
-            isGrounded = true;
-            isJump = false;
+            jumpTimer = Time.time + jumpDelay;
         }
     }
+    private void FixedUpdate()
+    {
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+        r2d.velocity = new Vector2(horizontal * speed, r2d.velocity.y);
+
+        if (jumpTimer > Time.time && isGrounded)
+        {
+            Jump();
+        }
+        
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position + colliderOffset, transform.position + colliderOffset + Vector3.down * groundLength);
+        Gizmos.DrawLine(transform.position - colliderOffset, transform.position - colliderOffset + Vector3.down * groundLength);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -105,37 +144,39 @@ public class CharacterMov : MonoBehaviour
             isLadder = false;
         }
     }
-    
-
-    private void FixedUpdate()
-    {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        r2d.velocity = new Vector2(horizontal * speed, r2d.velocity.y);
-    }
 
     void Movement()
     {
         // Movement
         if (Input.GetKey(KeyCode.D))
         {
-            if (!isSlide)
+            if (!isSlide && !facingRight)
             {
                 _spriteRenderer.flipX = false;
-            }            
-            speed = 8.0f;
-            _animator.SetFloat("speed", speed);
-            _animator.SetBool("moving", true);       
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            if (!isSlide)
-            {
-                _spriteRenderer.flipX = true;
+                facingRight = true;
+                if (isGrounded)
+                {
+                    CreateDust();
+                }
             }
             speed = 8.0f;
             _animator.SetFloat("speed", speed);
-            _animator.SetBool("moving", true);            
+            _animator.SetBool("moving", true);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            if (!isSlide && facingRight)
+            {
+                _spriteRenderer.flipX = true;
+                facingRight = false;
+                if (isGrounded)
+                {
+                    CreateDust();
+                }
+            }
+            speed = 8.0f;
+            _animator.SetFloat("speed", speed);
+            _animator.SetBool("moving", true);
         }
         else
         {
@@ -148,7 +189,7 @@ public class CharacterMov : MonoBehaviour
         if (isLadder)
         {
             r2d.gravityScale = 0;
-            r2d.drag = 10.0f;
+            r2d.drag = 10f;
             if (Input.GetKey(KeyCode.W))
             {
                 r2d.velocity = new Vector2(r2d.velocity.x, vertical * 4);
@@ -165,28 +206,28 @@ public class CharacterMov : MonoBehaviour
                 _animator.SetBool("isClimbing", false);
             }
         }
-        else
-        {
-            _animator.SetBool("isClimbing", false);
-            r2d.gravityScale = 10.0f;
-            r2d.drag = 0;
-        }
 
-        // Ground Control
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && !isLadder)
         {
-            if (isGrounded)
+            r2d.gravityScale = 1;
+            isJump = false;
+            _animator.SetBool("grounded", true);
+            _animator.SetBool("isClimbing", false);
+        }
+        else if (!isGrounded && !isLadder)
+        {
+            r2d.gravityScale = gravity;
+            r2d.drag = linearDrag * 0.15f;
+            if(r2d.velocity.y < 0)
             {
-                Jump();
-                isGrounded = false;
-                isJump = true;
-                _animator.SetTrigger("jump");
-                _animator.SetBool("grounded", false);
+                r2d.gravityScale = gravity * fallMultiplier;
+            } else if (r2d.velocity.y > 0 && !Input.GetKey(KeyCode.Space)){
+                r2d.gravityScale = gravity * (fallMultiplier / 2);
             }
         }
 
         //Defense
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isLadder)
         {
             isSlide = true;
             _animator.SetBool("isSlide", true);
@@ -233,8 +274,18 @@ public class CharacterMov : MonoBehaviour
     // Jump
     void Jump()
     {
-        r2d.velocity = new Vector2(r2d.velocity.x, 20);
+        isGrounded = false;
+        isJump = true;
+        CreateDust();
+        _animator.SetTrigger("jump");
+        _animator.SetBool("grounded", false);
+        r2d.velocity = new Vector2(r2d.velocity.x, 0);
+        r2d.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+        jumpTimer = 0;
+    }
 
-        //r2d.velocity += new Vector2(0, 8);
+    void CreateDust()
+    {
+        dust.Play();
     }
 }

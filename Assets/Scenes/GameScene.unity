@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 731570664}
   - component: {fileID: 731570663}
   - component: {fileID: 731570662}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -464,38 +464,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 855657459, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 855657460, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 855657461, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 8572252838775912320, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8572252838775912321, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Size.x
-      value: 0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 8572252838775912321, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Size.y
-      value: 0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 8572252838775912321, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8572252838775912321, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8572252838775912327, guid: 3cc7ef1be4049e142a08527d3c7c353b, type: 3}
       propertyPath: m_Name
       value: Player
