@@ -53,14 +53,17 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Ve bu amaç için br 
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
 
+[Toplantı Arşivi](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Notion%20Meeting.png)
+[Toplantı Kararları](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/NotionMeetingKararları.png)
+
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog1.png) 
-![Backlog 2](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog2.png) 
-![Backlog 3](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog3.png)
+![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Trello.png) 
+![Backlog 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Trello1.png) 
+
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss1.png?raw=true)
-  ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss2.png?raw=true)
+  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Knight.png)
+  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Enemy.png)
 
 - **Sprint Review**: 
 Alınan kararlar: Belirlediğimiz iki aşamalı backlog'un ilk aşamaıs olarak bitmiş bol mekanikli ve 4 temel konseptten oluşan bir platformer oyunu üretilmesi kararı alınmıştır. Şuana kadar bu görevin büyük kısmı tamamlanmış durumda. İkinci aşamada ise oyunun bireysel seçimlere dayanmasını ve bir hikayeye bağlılığının belirtilmesini sağlayacak mekanikler oluşturulacaktır. Bu akış içerisinde bir sonraki sprintte bahsedilen oyunun bitmesi özelleştirmeler için firebase kullanımının projeye uyarlanması beklenmektedir.Şu ana kadar çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: Büşra Tatar, Gufran Yeşilyurt
