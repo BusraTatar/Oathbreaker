@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 855657461}
   - component: {fileID: 855657460}
   - component: {fileID: 855657459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: slideCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1458734201}
   - component: {fileID: 1458734203}
   - component: {fileID: 1458734202}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DustPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4937,7 +4937,7 @@ GameObject:
   - component: {fileID: 8572252838775912322}
   - component: {fileID: 8572252838775912321}
   - component: {fileID: 8572252838775912320}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5114,7 +5114,7 @@ GameObject:
   - component: {fileID: 8572252839584299833}
   - component: {fileID: 8572252839584299832}
   - component: {fileID: 31422018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

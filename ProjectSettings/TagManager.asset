@@ -6,16 +6,17 @@ TagManager:
   tags:
   - Platform
   - Ladder
+  - Skeleton
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ladder
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
