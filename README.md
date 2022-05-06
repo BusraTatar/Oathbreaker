@@ -77,7 +77,9 @@ Alınan kararlar: Belirlediğimiz iki aşamalı backlog'un ilk aşamaıs olarak 
 
 -**Diğer Notlar**:
 [Oyun Başlangıcında oluşturulan gdd taslağı](https://docs.google.com/document/d/1RBs5aPxVjntqDYFEXCVlJColshxjT6y0/edit?usp=sharing&ouid=110371448881838982572&rtpof=true&sd=true)
+
 [Gantt Şeması](https://drive.google.com/file/d/1pFbfj8ma8fTkA-CGGv8qd1ExPtUzSa9D/view?usp=sharing)
+
 [Notion Education and Meeting's Calender Board](https://www.notion.so/evik-Proje-Y-netimi-zet-Anlat-m-9016c5ffbea944e4af8805321932f2f3)
 
 ---
