@@ -51,7 +51,7 @@ public class CharacterMov : MonoBehaviour
 
     private Rigidbody2D r2d;
 
-    private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer _spriteRenderer;
 
     public bool isAttacking;
 
@@ -68,7 +68,6 @@ public class CharacterMov : MonoBehaviour
     void Start()
     {
         r2d = GetComponent<Rigidbody2D>(); //caching Rigidbody2D
-        _spriteRenderer = GetComponent<SpriteRenderer>(); //caching SpriteRenderer
         _animator = GetComponent<Animator>(); //caching Animator
         facingRight = true;
         isGrounded = false;
