@@ -51,9 +51,7 @@
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Ve bu amaç için br **Gant Şeması** oluşturuluştur. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
-[Sprint 1 Daily Scrum Chats 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/DailyScrum.png) 
-[Sprint 1 DailyScrum Chats 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/DailyScrum1.png)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
 
 [Toplantı Arşivi](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Notion%20Meeting.png)
 [Toplantı Kararları](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/NotionMeetingKararları.png)
