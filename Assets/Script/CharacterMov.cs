@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class CharacterMov : MonoBehaviour
 {
+    //checkpoint
+    [SerializeField] private Vector2[] _checkPoints;
+    public static Vector2 _lastTransform;
+
+
     public static CharacterMov instance;
 
     private bool facingRight;
@@ -74,6 +79,8 @@ public class CharacterMov : MonoBehaviour
         isSlide = false;
         isLadder = false;
         isJump = false;
+        //checkpoint
+        transform.position = _lastTransform;
     }
 
     void Update()
