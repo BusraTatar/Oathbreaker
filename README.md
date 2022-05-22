@@ -51,7 +51,7 @@
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Ve bu amaç için br **Gant Şeması** oluşturuluştur. 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/DailyScrum1.png) [Sprint 1 Daily Scrum Chats]( https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/DailyScrum.png)
 
 [Toplantı Arşivi](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Notion%20Meeting.png)
 [Toplantı Kararları](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/NotionMeetingKararları.png)
@@ -95,26 +95,23 @@ Alınan kararlar: Belirlediğimiz iki aşamalı backlog'un ilk aşamaıs olarak 
 
 Gant şemasında belirlenen hedeflerde süreye bakılarak geride kaldığımız için oyunda değişiklik yapma kararı alınmıştır.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintDailyScrum.jpg)
 
-[Toplantı Arşivi](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Notion%20Meeting.png)
-[Toplantı Kararları](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/NotionMeetingKararları.png)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Trello.png) 
-![Backlog 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Trello1.png) 
+![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintTrello.png) 
+
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Knight.png)
-  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Enemy.png)
+  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene.png)
+  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene2.png)
 
 - **Sprint Review**: 
-Alınan kararlar:4 konseptten ilki olaan mağara ile ilgili level design başlanmıştır. Oyunun seçimlere bağlanması ve bir hikaye içermesi iin bir diyalog sisteminin prototiplenmesi yapılmış oyuna uygulanması için level design'ın tamamlanması beklenmektedir. Bu akış içerisinde bir sonraki sprintte UI oluşturulması audioların eklenmesi ve tüm bileşenlerin birleştirilmesi beklenmektedir.Şu ana kadar çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: Büşra Tatar, Esma Yurttaş
+Alınan kararlar:4 konseptten ilkinin level design'ı ve hareketi level elemanları tamamlanarak ikinci konseptin level design'ına başlanmıştır. Oyuna eklenmesi öngörülen gizli ödül odaları ve diyalog sistemi , diyalog sistemi öncelikli olmak üzere, ikinci plana bırakılmıştır. Bir sonraki sprinte kadar tam ve çalışır bir platformer elde edilmesi amaçlanmaktadir. Şu ana kadar çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması veya değiştirilmesi gereken özellikler belirlenmiştir. Sprint Review katılımcıları: Büşra Tatar, Esma Yurttaş, Yunus Emre Baysal
 
 - **Sprint Retrospective:**
   - Unit test'ler için ayrılan efor/saat arttırılmalı 
-  - Developerlar ön plana çıkarak develop kısmında etkiliğini arttırmalı
   - Daily Scrumlara herkesin katılımı artmalı
   - Günlük ilerleme kaydedilmesi hedeflenmeli
   - İlk olarak çalışır ve bitmiş bir oyun ortaya çıkarılmalı
