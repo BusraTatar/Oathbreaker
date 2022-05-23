@@ -44,6 +44,8 @@ public class CharacterMov : MonoBehaviour
 
     private bool isLadder;
 
+    
+
     private int jumpers;
 
     private int slide;
@@ -128,6 +130,7 @@ public class CharacterMov : MonoBehaviour
                 isGrounded = true;
             }
         }
+       
     }
 
     private void OnTriggerStay2D(Collider2D other)

@@ -5116,6 +5116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ccaa7f90583eb46b9db86d4c14f378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _checkPoints: []
   colliderOffset: {x: 0.5, y: 0, z: 0}
   dust: {fileID: 1458734203}
   _animator: {fileID: 8572252838775912322}
