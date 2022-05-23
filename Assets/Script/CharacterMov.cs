@@ -97,10 +97,11 @@ public class CharacterMov : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         r2d.velocity = new Vector2(horizontal * speed, r2d.velocity.y);
-
+        
         if (jumpTimer > Time.time && isGrounded)
         {
             Jump();
