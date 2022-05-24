@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: 6171b9ce9fa99a44abb2889e031d929b
+  - enabled: 1
+    path: Assets/Scenes/cave-0.unity
+    guid: 09f8ada70ba4d4b4eb5ddb8270b12156
+  - enabled: 1
+    path: Assets/Scenes/cave-1.unity
+    guid: 39b49f75c30d7f04ca188dda3943df53
+  - enabled: 1
+    path: Assets/Scenes/cave-2.unity
+    guid: 4647c4d9211b5ec4688c51956eea4c2c
+  - enabled: 1
+    path: Assets/Scenes/cave-3.unity
+    guid: 24a441099e622ce4bbf5f4e42c5df2a6
+  - enabled: 1
+    path: Assets/Scenes/cave-4.unity
+    guid: 3f6ec2b1d0740d14b82599bc8a4610ba
   m_configObjects: {}

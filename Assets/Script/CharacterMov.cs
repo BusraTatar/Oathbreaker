@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMov : MonoBehaviour
@@ -46,9 +44,9 @@ public class CharacterMov : MonoBehaviour
 
     
 
-    private int jumpers;
+    //private int jumpers;
 
-    private int slide;
+    //private int slide;
 
     public Vector3 colliderOffset;
 

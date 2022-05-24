@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,6 +90,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4580,8 +4592,8 @@ TextureImporter:
       mainlev_build_62: 923290305
       mainlev_build_167: 1781036927
       mainlev_build_80: 1635936706
-      mainlev_build_20: -1872740329
       mainlev_build_158: -217556973
+      mainlev_build_20: -1872740329
       mainlev_build_74: 1133950559
       mainlev_build_175: -1124408487
       mainlev_build_3: 1543129143
@@ -4600,13 +4612,13 @@ TextureImporter:
       mainlev_build_44: -1670101188
       mainlev_build_22: -228910681
       mainlev_build_42: -2033349930
-      mainlev_build_56: 1695845804
       mainlev_build_185: -1438451068
+      mainlev_build_56: 1695845804
       mainlev_build_129: -332857610
       mainlev_build_13: -1968680095
       mainlev_build_35: 1119245237
-      mainlev_build_103: -834569974
       mainlev_build_173: 874961714
+      mainlev_build_103: -834569974
       mainlev_build_120: -1381537841
       mainlev_build_61: -1834898246
       mainlev_build_176: 512403493
@@ -4701,10 +4713,9 @@ TextureImporter:
       mainlev_build_36: 1901915616
       mainlev_build_79: -1807660099
       mainlev_build_164: 565130075
-      mainlev_build_70: -949062476
-      mainlev_build_143: -1957614090
-      mainlev_build_91: 1084603142
       mainlev_build_169: 1017904503
+      mainlev_build_70: -949062476
+      mainlev_build_91: 1084603142
       mainlev_build_187: 1364515619
       mainlev_build_82: 1545868979
       mainlev_build_68: 1940363236
@@ -4713,6 +4724,7 @@ TextureImporter:
       mainlev_build_144: -2055058305
       mainlev_build_0: 1784467254
       mainlev_build_153: -1652388435
+      mainlev_build_143: -1957614090
       mainlev_build_156: -364956602
       mainlev_build_10: 1457855344
       mainlev_build_200: -1653106251
