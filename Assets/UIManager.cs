@@ -6,11 +6,17 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialog;
-    public string[] sentences = new string[5];
+    //public TextMeshProUGUI dialog;
+    public GameObject[] sentences = new GameObject[5];
+    GameObject text;
+    GameObject text1;
+    int counter;
+    public GameObject dialogpanel;
     void Start()
     {
-        string [] sentences= { "I guess I don't know you. Who are you too?", "This is a very wrong question. What matters is not who I am. I've come to warn you against prophecy." };
+        
+        counter = 1;
+       
     }
 
    
@@ -21,10 +27,15 @@ public class UIManager : MonoBehaviour
 
     public void Next()
     {
-        for (int i = 0; i <5; i++)
-        {   
-            string text = sentences[i];
-            dialog.text = text.ToString();
+        
+            text = sentences[counter - 1];
+            text1 = sentences[counter];
+            text.gameObject.SetActive(false);
+            text1.gameObject.SetActive(true);
+            counter++;
+        if (counter >= 5)
+        {
+            dialogpanel.SetActive(false);
         }
     }
 
