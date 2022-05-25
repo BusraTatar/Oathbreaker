@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,6 +90,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1551,17 +1563,17 @@ TextureImporter:
       other_and_decorative_13: 1200640174
       other_and_decorative_65: -1826681100
       other_and_decorative_54: 1041442806
+      other_and_decorative_46: -2139322273
       other_and_decorative_34: -2033022161
       other_and_decorative_11: 931057868
       other_and_decorative_16: -429437828
       other_and_decorative_39: -1114074676
-      other_and_decorative_46: -2139322273
       other_and_decorative_57: 178494562
       other_and_decorative_36: -1866816260
       other_and_decorative_17: -1754588771
       other_and_decorative_7: 1963193485
-      other_and_decorative_37: -1121614596
       other_and_decorative_66: -1356021822
+      other_and_decorative_37: -1121614596
       other_and_decorative_59: 801975700
       other_and_decorative_43: 202617460
       other_and_decorative_29: -596691178
