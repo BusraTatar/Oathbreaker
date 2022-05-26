@@ -235,7 +235,7 @@ public class CharacterMov : MonoBehaviour
         }
 
         //Defense
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isLadder)
+        if (Input.GetKeyDown(KeyCode.RightShift) && !isLadder)
         {
             isSlide = true;
             _animator.SetBool("isSlide", true);
@@ -273,7 +273,7 @@ public class CharacterMov : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && !isAttacking)
+        if (Input.GetMouseButtonDown(1) && !isAttacking)
         {
             isAttacking = true;
         }
