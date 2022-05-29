@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterMov : MonoBehaviour
 {
@@ -66,6 +67,10 @@ public class CharacterMov : MonoBehaviour
 
     public LayerMask groundLayer;
 
+
+
+    //healthbar
+    public Slider HealthBar;
     private void Awake()
     {
         instance = this;
@@ -81,6 +86,9 @@ public class CharacterMov : MonoBehaviour
         isJump = false;
         //checkpoint
         transform.position = _lastTransform;
+
+        //healthBar
+        HealthBar.value = 1f;
     }
 
     void Update()
@@ -130,6 +138,14 @@ public class CharacterMov : MonoBehaviour
         }
        
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("FailObject"))
+        {
+            HealthBar.value -= 0.2f;
+
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -158,6 +174,7 @@ public class CharacterMov : MonoBehaviour
         // Movement
         if (Input.GetKey(KeyCode.D))
         {
+           
             if (!isSlide && !facingRight)
             {
                 _spriteRenderer.flipX = false;

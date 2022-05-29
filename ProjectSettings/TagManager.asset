@@ -9,6 +9,7 @@ TagManager:
   - Skeleton
   - Enemy
   - Trigger
+  - FailObject
   layers:
   - Default
   - TransparentFX
