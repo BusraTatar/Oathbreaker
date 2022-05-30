@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Trigger
   - FailObject
+  - Failed
   layers:
   - Default
   - TransparentFX

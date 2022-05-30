@@ -71,6 +71,8 @@ public class CharacterMov : MonoBehaviour
 
     //healthbar
     public Slider HealthBar;
+    //failed
+    public GameObject FailPanel;
     private void Awake()
     {
         instance = this;
@@ -89,6 +91,7 @@ public class CharacterMov : MonoBehaviour
 
         //healthBar
         HealthBar.value = 1f;
+        
     }
 
     void Update()
@@ -101,6 +104,10 @@ public class CharacterMov : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpTimer = Time.time + jumpDelay;
+        }
+        if (HealthBar.value == 0)
+        {
+            FailPanel.SetActive(true);
         }
     }
     private void FixedUpdate()
@@ -145,6 +152,12 @@ public class CharacterMov : MonoBehaviour
             HealthBar.value -= 0.2f;
 
         }
+        if (collision.gameObject.CompareTag("Failed"))
+        {
+            HealthBar.value -= 1f;
+
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
