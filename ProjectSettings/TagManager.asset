@@ -11,6 +11,8 @@ TagManager:
   - Trigger
   - FailObject
   - Failed
+  - hitBox
+  - Play
   layers:
   - Default
   - TransparentFX

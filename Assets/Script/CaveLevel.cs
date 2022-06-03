@@ -15,15 +15,11 @@ public class CaveLevel : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             loadingPanel.SetActive(true);
-            StartCoroutine(Level());
+          
         }
     }
 
-    IEnumerator Level()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+  
 }
 
  

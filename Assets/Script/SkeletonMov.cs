@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class SkeletonMov : MonoBehaviour
 {
@@ -24,14 +26,21 @@ public class SkeletonMov : MonoBehaviour
     private float initialTimer;
     #endregion
 
+    public Slider healthbar;
     private void Awake()
     {
         SelectTarget();
         initialTimer = cooldown; //Store the initial value of timer.
         anim = GetComponent<Animator>(); //caching animator
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Play"))
+        { 
+            healthbar.value -= 0.05f;
+        }
+    }
 
-    // Update is called once per frame
     void Update()
     {
         if (!attackMode)
@@ -85,6 +94,7 @@ public class SkeletonMov : MonoBehaviour
 
         anim.SetBool("canWalk", false);
         anim.SetBool("isAttack", true);
+        
     }
 
     void Cooldown()

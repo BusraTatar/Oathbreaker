@@ -4,6 +4,8 @@ using UnityEngine;
 public class GameSceneUI : MonoBehaviour
 {
     public GameObject PausePanel;
+    
+
     private void Start()
     {
         Time.timeScale = 1f;

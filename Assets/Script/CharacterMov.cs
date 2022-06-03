@@ -73,6 +73,7 @@ public class CharacterMov : MonoBehaviour
     public Slider HealthBar;
     //failed
     public GameObject FailPanel;
+    public GameObject PauseButton;
     private void Awake()
     {
         instance = this;
@@ -108,6 +109,8 @@ public class CharacterMov : MonoBehaviour
         if (HealthBar.value == 0)
         {
             FailPanel.SetActive(true);
+            PauseButton.SetActive(false);
+            Time.timeScale = 0;
         }
     }
     private void FixedUpdate()
@@ -143,13 +146,17 @@ public class CharacterMov : MonoBehaviour
                 isGrounded = true;
             }
         }
+        if (other.gameObject.CompareTag("hitBox"))
+        {
+            HealthBar.value-=0.05f;
+        }
        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("FailObject"))
         {
-            HealthBar.value -= 0.2f;
+            HealthBar.value -= 0.1f;
 
         }
         if (collision.gameObject.CompareTag("Failed"))
@@ -157,6 +164,8 @@ public class CharacterMov : MonoBehaviour
             HealthBar.value -= 1f;
 
         }
+       
+
 
     }
 
@@ -171,6 +180,7 @@ public class CharacterMov : MonoBehaviour
                 isGrounded = true;
             }
         }
+       
     }
 
 
