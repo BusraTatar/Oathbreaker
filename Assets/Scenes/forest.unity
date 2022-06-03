@@ -21349,6 +21349,8 @@ GameObject:
   - component: {fileID: 856118720}
   - component: {fileID: 856118722}
   - component: {fileID: 856118721}
+  - component: {fileID: 856118724}
+  - component: {fileID: 856118723}
   m_Layer: 7
   m_Name: SET1_Mainlev_build_26 (7)
   m_TagString: Platform
@@ -21449,6 +21451,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &856118723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856118719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a719ed581911b48ad55210e1da8276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &856118724
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856118719}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1076472060
 GameObject:
   m_ObjectHideFlags: 0
@@ -21796,7 +21831,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.285187, y: -1.1617203}
+  m_Offset: {x: 0.7078285, y: -0.2608099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21807,7 +21842,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0425873, y: 0.5659504}
+  m_Size: {x: 3.1992722, y: 0.48761177}
   m_EdgeRadius: 0
 --- !u!1 &1245259298
 GameObject:
@@ -22807,8 +22842,8 @@ GameObject:
   - component: {fileID: 1895920735}
   - component: {fileID: 1895920734}
   - component: {fileID: 1895920733}
-  - component: {fileID: 1895920737}
   - component: {fileID: 1895920736}
+  - component: {fileID: 1895920737}
   m_Layer: 7
   m_Name: SET1_Mainlev_build_26 (9)
   m_TagString: Platform
@@ -22939,9 +22974,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895920732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a719ed581911b48ad55210e1da8276, type: 3}
+  m_Script: {fileID: 11500000, guid: 950cb1e80be543c4e8f1987a2224fa16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallDelay: 2
 --- !u!1001 &2073942983
 PrefabInstance:
   m_ObjectHideFlags: 0
