@@ -16,13 +16,11 @@
 
 ## Ürün Açıklaması
 
-- Oathbreaker 2D pixel art bir platfomer oyunudur. Ama oyunumuzda benzer genrelerde pek rastlanmayan bir mekanik olarak, oyuncuya aktif ve pasif kararlarla oyunun geleceğini seçebilme imkanı verilir.
+- Oathbreaker 2D pixel art bir platfomer oyunudur. Ama oyunumuzda benzer genrelerde pek rastlanmayan bir mekanik olarak, oyuncuya aktif ve pasif kararlarla oyunun geleceğini seçebilme imkanı verilir.(Yetişmediği  için yapılamadı)
 
 ## Ürün Özellikleri
 
 - Karakterin hareket seçeneği çoktur. (Klasik platformer hareketlerine ek saldırı ve savunma)
-- Oyuncunun yaptığı seçimler ile oyun ile bağlantı kurulabilir.
-- Farklı konsepler oyuncuda merak duygusu uyandırır.
 - Farklı level mekanikleri ve enemy/boss lar sayesinde ideal zorluk seviyesi sağlanmıştır.
 
 ## Hedef Kitle
@@ -132,17 +130,17 @@ Alınan kararlar:4 konseptten ilkinin level design'ı ve hareketi level elemanla
 
 Gant şemasından geride kaldığımız için yaptığımız değişikliklere yenileri de eklenmiştir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg  olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintDailyScrum.jpg) [Sprint 2 Daily Scrum Chats 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintDailyScrum.jpg)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg  olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Sprint3Chat.png) [Sprint 2 Daily Scrum Chats 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Sprint3Chat2.png)
 
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintTrello.png) 
+![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Sprint3Backlog.png) 
 
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene.png)
-  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene2.png)
+  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Sprint3Game.png)
+  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/Sprint3Game2.png)
 
 - **Sprint Review**: 
 Alınan kararlar:4 konseptten sadece ilkinin level designı tammalanabilmiş ikincisi yarım kaldığından iptal edilmiştir.Oyuna eklenmesi öngörülen birçok detay iptal edilmiştir. Tam bir platformer elde edilmiş küçük buglar üzerinde çalışılmaktadır. Değiştirilmesi gereken özellikler belirlenmiştir.                                 Sprint Review katılımcıları: Büşra Tatar, Esma Yurttaş
