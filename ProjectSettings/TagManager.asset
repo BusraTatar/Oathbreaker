@@ -13,6 +13,7 @@ TagManager:
   - Failed
   - hitBox
   - Play
+  - die
   layers:
   - Default
   - TransparentFX

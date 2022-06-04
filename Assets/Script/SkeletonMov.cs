@@ -26,23 +26,18 @@ public class SkeletonMov : MonoBehaviour
     private float initialTimer;
     #endregion
 
-    public Slider healthbar;
+
     private void Awake()
     {
         SelectTarget();
         initialTimer = cooldown; //Store the initial value of timer.
         anim = GetComponent<Animator>(); //caching animator
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Play"))
-        { 
-            healthbar.value -= 0.05f;
-        }
-    }
+   
 
     void Update()
     {
+      
         if (!attackMode)
         {
             Move();

@@ -45,9 +45,7 @@ public class CharacterMov : MonoBehaviour
 
     
 
-    //private int jumpers;
-
-    //private int slide;
+    
 
     public Vector3 colliderOffset;
 
@@ -71,9 +69,12 @@ public class CharacterMov : MonoBehaviour
 
     //healthbar
     public Slider HealthBar;
+
+   
     //failed
     public GameObject FailPanel;
     public GameObject PauseButton;
+
     private void Awake()
     {
         instance = this;
@@ -316,6 +317,7 @@ public class CharacterMov : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && !isAttacking)
         {
             isAttacking = true;
+           
         }
     }
 
