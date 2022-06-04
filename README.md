@@ -122,5 +122,35 @@ Alınan kararlar:4 konseptten ilkinin level design'ı ve hareketi level elemanla
 ---
 
 # Sprint 3
+- **Sprint Notları**: Enemy mekanikleri ve level hazırlanarak UI ve audio bağlanmıştır.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 200 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. Son sprint bug fix içerdiğinden daha büyük puan verilmiştir.
+
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Trelloya eklediğimiz backlog üzerinden çalışmalarımızı yürüttük. 
+
+Gant şemasından geride kaldığımız için yaptığımız değişikliklere yenileri de eklenmiştir.
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack ve genellikle watsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg  olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintDailyScrum.jpg) [Sprint 2 Daily Scrum Chats 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintDailyScrum.jpg)
+
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintTrello.png) 
+
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+  ![Screenshot 1](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene.png)
+  ![Screenshot 2](https://github.com/BusraTatar/Oathbreaker/blob/main/ProjectManagement/Sprint1Documents/2.sprintGameScene2.png)
+
+- **Sprint Review**: 
+Alınan kararlar:4 konseptten sadece ilkinin level designı tammalanabilmiş ikincisi yarım kaldığından iptal edilmiştir.Oyuna eklenmesi öngörülen birçok detay iptal edilmiştir. Tam bir platformer elde edilmiş küçük buglar üzerinde çalışılmaktadır. Değiştirilmesi gereken özellikler belirlenmiştir.                                 Sprint Review katılımcıları: Büşra Tatar, Esma Yurttaş
+
+- **Sprint Retrospective:**
+  - Herkes çalıştığından tercih edilen çalışma saatleri akşam saatleri bu nedenle projede ilerleme hayli yavaş oldu,
+  - İptal edilen detaylar hepimizi üzdü bu nedenle durumun sebepleri üzerine düşündük,
+  - Tam ve çalışır bir oyunumuz olduğu için mutluyuz ama başta planlanan ürünü ortaya koyamadık,
+  - Herkes elinden geleni yaptığı için memnun ama bir dahaki sefere kim neyi farklı yapmalı bunu üzerine konuştuk,
 
 ---
