@@ -4,8 +4,8 @@ using UnityEngine;
 public class GameSceneUI : MonoBehaviour
 {
     public GameObject PausePanel;
-    
 
+    public GameObject wizard;
     private void Start()
     {
         Time.timeScale = 1f;
@@ -28,6 +28,7 @@ public class GameSceneUI : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Destroy(wizard);
     }
 }
 

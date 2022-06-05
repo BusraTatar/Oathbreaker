@@ -70,6 +70,7 @@ public class CharacterMov : MonoBehaviour
     //healthbar
     public Slider HealthBar;
 
+
    
     //failed
     public GameObject FailPanel;
@@ -113,6 +114,7 @@ public class CharacterMov : MonoBehaviour
             PauseButton.SetActive(false);
             Time.timeScale = 0;
         }
+        
     }
     private void FixedUpdate()
     {

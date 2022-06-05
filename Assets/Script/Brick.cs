@@ -20,11 +20,13 @@ public class Brick : MonoBehaviour
 		{
 			Invoke("DropPlatform", 0.5f);
 			Destroy(gameObject, 2f);
+
 		}
-	}
-	void DropPlatform()
-	{
-		rb.isKinematic = false;
+		void DropPlatform()
+		{
+			rb.isKinematic = false;
+
+		}
 
 	}
 }

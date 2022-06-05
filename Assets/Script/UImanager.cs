@@ -19,6 +19,14 @@ public class UImanager : MonoBehaviour
     public void Audio()
     {
         //ses dosyasý eklenince düzenlenecek
-        audio.volume = 0;
+       
+        if (audio.volume != 0)
+        {
+            audio.volume = 0;
+        }
+        else
+        {
+            audio.volume = 1;
+        }
     }
 }
